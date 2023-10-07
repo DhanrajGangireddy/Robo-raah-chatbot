@@ -1,0 +1,183 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
+         "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"],
+         "context": [""]
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+         "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
+         "context": [""]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure"],
+         "context": [""]
+        },
+        {"tag": "noanswer",
+         "patterns": [],
+         "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+         "context": [""]
+        },
+        {"tag": "options",
+         "patterns": ["How you could help me?", "What help you provide?", "How you can be helpful?"],
+         "responses": ["I can guide you through Adverse management problems, order tracking, person to be contacted and Department related queries","I can provide support related to following problems technical query,management related query,order related query,tracking related query,procurement query,outsourcing problem,manufacturing delay,"],
+         "context": [""]
+        },
+        {"tag": "order_tracking",
+             "patterns": ["where is order with id 431B67?", "track order 562B78", "Where is my order with id 561A24?" ],
+         "responses": ["Delayed","Dispatched","On the Way!"],
+         "context": [""]
+        },
+        {"tag": "order_components",
+         "patterns": ["order id 345A23 comprises of?","List of components"],
+         "responses": ["order comprises of hardisk and bluetooth"],
+         "context": [""]
+        },
+        {
+            "tag": "greeting",
+            "patterns": ["Hello", "Hi", "Hey"],
+            "responses": ["Hello! How can I assist you today?", "Hi there! How can I help you?", "Hey! What can I do for you?"],
+            "context": [""]
+        },
+        {
+            "tag": "product_info",
+            "patterns": ["Tell me about a product", "What can you tell me about a product?", "Product details"],
+            "responses": ["Sure! Please provide the name or ID of the product you'd like to know more about."],
+            "context": [""]
+        },
+        {
+            "tag": "product_details",
+            "patterns": ["I'd like to know more about [product_name]", "Tell me about [product_name]", "What's [product_name]"],
+            "responses": ["Great! Let me fetch the details for [product_name].", "Sure, I'll find information about [product_name] for you."],
+            "context": [""]
+        },
+        {
+            "tag": "product_not_found",
+            "patterns": ["I can't find the product", "No results for [product_name]", "Product not available"],
+            "responses": ["I apologize, but I couldn't find any information about [product_name]. Please check the product name and try again."],
+            "context": [""]
+        },
+        {
+            "tag": "thank_you",
+            "patterns": ["Thank you", "Thanks", "Appreciate it"],
+            "responses": ["You're welcome! If you have more questions, feel free to ask.", "You're welcome! Have a great day!"],
+            "context": [""]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": ["Goodbye", "Bye", "See you later"],
+            "responses": ["Goodbye! If you need assistance in the future, don't hesitate to return.", "Goodbye! Have a wonderful day!"],
+            "context": [""]
+        },
+        {
+        "tag": "cost_lowering",
+         "patterns": ["Cost Lowering changes to be made?","what changes could lower cost?"],
+         "responses": ["Increase Transportation capacity utilisation,Increase supply chain velocity,Reduce order variability"],
+         "context": [""]
+        },
+         {"tag": "forgot_password",
+         "patterns": ["I forgot my Login password?","what to do when someone forgets Login password?","I forgot my Laptop password","Forgot Wifi password"],
+         "responses": ["Please enter your email id ,we will send a link on your email"],
+          "context": [""]
+        },
+        
+          {"tag": "email_id",
+          "patterns":["abx@gmail.com","abc@kiit.ac.in"],
+          "responses":["Link has been shared.Please change your password"],
+           "context": [""]
+        },
+        {"tag": "manufacturing_problems",
+         "patterns": ["Find me a manufacturer nearby"],
+         "responses": ["The nearest manufacturer is Vietnam"],
+         "context": [""]
+        },
+        {"tag": "search_department",
+         "patterns": ["I want to know the various departments in this company"],
+         "responses": ["The department are:Projects,IT,Production,OutSource"],
+         "context": [""]
+        },
+        {"tag": "competitors_in_market",
+         "patterns": ["what are challenging events", "what are the threats in the market"],
+         "responses": ["Recent news of Demonetisation & recession"],
+         "context": [""]
+        },
+       {"tag": "key_customers",
+         "patterns": ["Our Target customers", "who are your key customers"],
+         "responses": ["Our target customers are in the range of age 20-40"],
+         "context": [""]
+        },
+     {"tag": "supplier_info",
+         "patterns": ["What information is shared with supplier?"],
+         "responses": ["Production Schedule,Delivery Schedule,Proxy information about cost"],
+         "context": [""]
+        },
+     {"tag": "highest_grossing",
+         "patterns": ["What is the highest grossing product?"],
+         "responses": ["Laptop with touch sensors and 360 rotation"],
+         "context": [""]
+        },
+        {"tag": "solve_problems",
+         "patterns": ["Lack of product clarity","the specifications of product is not clear to customer. what should we do"],
+         "responses": ["Please enter product id and customer id.specifications shall be sent to user"],
+         "context": [""]
+        },
+    {"tag": "factors_impacting_sale",
+         "patterns": ["Impact on sale?","factors impacting sale this year?"],
+         "responses": ["elections will impact our sale this year","this year our sale might increase during durga puja","this year sale might be impacted due to demonitisation"],
+         "context": [""]
+        },
+    
+    {"tag": "predict_performance",
+         "patterns": ["how have we improved our sale from last year?","what is the profit this year?"],
+         "responses": ["we have improved our sale by increasing our customers upto 2 lakh","profit earned is 15%"],
+         "context": [""]
+        },
+         { "tag": "customer_satisfaction",
+         "patterns": ["how was the customer response","Is the customer happy?","what was the customer feedback?"],
+         "responses": ["Customer was happy and has given good rating"],
+         "context": [""]
+        },
+    {"tag": "maintainence",
+         "patterns": ["maintainence related queries recorded"],
+         "responses": ["lift is not working, projector misfuctioning"],
+         "context": [""]
+        },
+         {"tag": "gadgets",
+         "patterns": ["what are the gadgets in stock?","which products we have?"],
+         "responses": ["hardisk,pendrives, wireless bluetooth,Laptops,Gaming Accessories"],
+         "context": [""]
+        },
+    {"tag": "commission",
+         "patterns": ["what is the Commission rate?","Commission rate on each product?"],
+         "responses": ["Commission rate is 5% on laptops,25%on bluetooth device,10% on Desktop"],
+         "context": [""]
+        },
+    {"tag": "invalid",
+         "patterns": ["Marry me","I love You","date me","chat with me","I am bored","Movies","sex"],
+         "responses": ["Please ask organisation related query."],
+         "context": [""]
+        },
+    {"tag": "noans",
+         "patterns": ["why","how","when","I","you"],
+         "responses": ["please ask oragnisation related information","please elaborate your question"],
+         "context": [""]
+        },
+        {"tag": "predict_delay",
+         "patterns": ["why is order 23A12 delayed"],
+         "responses": ["delay is due to manufacuring","Delay is due to inavailable components"],
+         "context": [""]
+        },
+        {"tag": "name",
+         "patterns": ["what is your name?","what should I call you?"],
+         "responses": ["I'm ROBORAAH","Hey!I'm RoboRaah"],
+         "context": [""]
+        },
+         {"tag": "about",
+         "patterns": ["how you doing?","how are you"],
+         "responses": ["Thanks For Asking!How can I help you?"],
+         "context": [""]
+        }
+    
+   ]
+}
