@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>ROBORAAH</h2>
+        </div>
+        <div class="chat-body" id="chat-body">
+            <!-- Chat messages will be displayed here -->
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="user-message" placeholder="Type a message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function appendMessage(message, isUser) {
+            var chatBody = document.getElementById('chat-body');
+            var messageDiv = document.createElement('div');
+            messageDiv.className = isUser ? 'user-message' : 'bot-message';
+            messageDiv.textContent = message;
+            chatBody.appendChild(messageDiv);
+            chatBody.scrollTop = chatBody.scrollHeight; // Auto-scroll to the bottom
+        }
+
+        function sendMessage() {
+            var userMessage = document.getElementById('user-message').value;
+            if (!userMessage) return; // Don't send empty messages
+            appendMessage(userMessage, true);
+            document.getElementById('user-message').value = '';
+
+            $.ajax({
+                url: '/get_response',
+                type: 'POST',
+                data: { usermsg: userMessage },
+                success: function(response) {
+                    appendMessage(response.response, false);
+                }
+            });
+        }
+        document.getElementById('user-message').addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        });
+    </script>
+</body>
+</html>
