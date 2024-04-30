@@ -1,3 +1,4 @@
+#training file
 import nltk
 import json
 import pickle
